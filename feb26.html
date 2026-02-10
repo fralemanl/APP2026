@@ -138,6 +138,63 @@
       type="text/css"
       media="all"
     />
+
+    <style>
+      /* Multi-day event styles */
+      .tribe-events-calendar {
+        position: relative;
+      }
+
+      .multiday-event-bar {
+        background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+        color: white;
+        padding: 8px 12px;
+        margin: 4px 2px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .multiday-event-bar:hover {
+        background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+        box-shadow: 0 4px 10px rgba(76, 175, 80, 0.5);
+      }
+
+      .multiday-event-bar.event-2days {
+        grid-column: span 2;
+      }
+
+      .multiday-event-bar.event-3days {
+        grid-column: span 3;
+      }
+
+      .multiday-event-bar.event-4days {
+        grid-column: span 4;
+      }
+
+      .multiday-event-duration {
+        font-size: 11px;
+        opacity: 0.9;
+        margin-left: auto;
+      }
+
+      .tribe-events-calendar td {
+        overflow: visible;
+      }
+
+      .multiday-events-row {
+        display: contents;
+      }
+    </style>
   </head>
 
   <body
@@ -162,20 +219,6 @@
                 </div>
                 <div class="top_panel_top_user_area">
                   <ul id="menu_user" class="menu_user_nav">
-                    <li class="menu_user_register">
-                      <a
-                        href="#popup_registration"
-                        class="popup_link popup_register_link icon-pencil"
-                        >Register</a
-                      >
-                    </li>
-                    <li class="menu_user_login">
-                      <a
-                        href="#popup_login"
-                        class="popup_link popup_login_link icon-user"
-                        >Login</a
-                      >
-                    </li>
                     <li class="top_panel_top_search">
                       <div
                         class="search_wrap search_style_regular search_state_fixed"
@@ -330,11 +373,6 @@
                   <a class="search_results_close icon-cancel"></a>
                   <div class="search_results_content"></div>
                 </div>
-              </div>
-              <div class="login">
-                <a href="#popup_login" class="popup_link popup_login_link"
-                  >Login</a
-                >
               </div>
             </div>
             <div class="panel_bottom">
@@ -823,6 +861,42 @@
                             </tr>
                           </tbody>
                         </table>
+
+                        <!-- Multi-day Events Section -->
+                        <div style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px;">
+                          <h4 style="margin-top: 0; color: #333; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Eventos Multi-día</h4>
+                          
+                          <!-- Event 1: 2 days (01-02) -->
+                          <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 15px;">
+                            <div class="multiday-event-bar event-2days" style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); grid-column: span 2;">
+                              🎾 Torneo Mixto <span class="multiday-event-duration">01-02 Feb</span>
+                            </div>
+                          </div>
+
+                          <!-- Event 2: 4 days (14-17) -->
+                          <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 15px;">
+                            <div></div> <!-- Mon 1 -->
+                            <div></div> <!-- Tue 2 -->
+                            <div></div> <!-- Wed 3 -->
+                            <div></div> <!-- Thu 4 -->
+                            <div></div> <!-- Fri 5 -->
+                            <div></div> <!-- Sat 6 -->
+                            <div></div> <!-- Sun 7 -->
+                            
+                            <div></div> <!-- Mon 8 -->
+                            <div></div> <!-- Tue 9 -->
+                            <div></div> <!-- Wed 10 -->
+                            <div></div> <!-- Thu 11 -->
+                            <div></div> <!-- Fri 12 -->
+                            <div></div> <!-- Sat 13 -->
+                            <div></div> <!-- Sun 14 -->
+                            
+                            <div class="multiday-event-bar event-4days" style="background: linear-gradient(135deg, #00BCD4 0%, #0097A7 100%); grid-column: span 4;">
+                              🏆 Campeonato Abierto <span class="multiday-event-duration">14-17 Feb</span>
+                            </div>
+                          </div>
+                        </div>
+
                         <!-- Month Footer -->
                         <div id="tribe-events-footer">
                           <!-- Footer Navigation -->
