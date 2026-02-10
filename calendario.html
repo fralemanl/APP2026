@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Eventos - APP Pádel</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    
+    <!-- FullCalendar CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css' rel='stylesheet' />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="css/fontello/css/fontello.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/responsive.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        /* Header */
+        .top_panel_wrap {
+            background: #1a1a1a;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo img {
+            max-height: 50px;
+            width: auto;
+        }
+        
+        .header-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .header-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .header-menu a:hover {
+            color: #4caf50;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .page-title {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .page-subtitle {
+            color: #4caf50;
+            margin-bottom: 30px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Calendar */
+        .calendar-wrapper {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        #calendar {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        /* FullCalendar Custom Styling */
+        .fc {
+            font-size: 14px;
+        }
+        
+        .fc .fc-button-primary {
+            background-color: #4caf50;
+            border-color: #4caf50;
+        }
+        
+        .fc .fc-button-primary:hover {
+            background-color: #45a049;
+        }
+        
+        .fc .fc-button-primary.fc-button-active {
+            background-color: #3d8b40;
+        }
+        
+        .fc-daygrid-day.fc-day-other {
+            background-color: #fafafa;
+        }
+        
+        .fc-col-header-cell {
+            background-color: #f0f0f0;
+            border-bottom: 2px solid #e0e0e0;
+            font-weight: 600;
+            color: #333;
+            padding: 12px 0;
+        }
+        
+        .fc-daygrid-day-number {
+            padding: 8px 6px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .fc-event {
+            cursor: pointer;
+            border: none !important;
+            font-weight: 500;
+        }
+        
+        .fc-event-title {
+            padding: 2px 4px;
+            font-size: 12px;
+        }
+        
+        /* Event colors */
+        .fc-event {
+            background-color: #4caf50;
+        }
+        
+        .fc-event.event-tournament {
+            background-color: #2196F3;
+        }
+        
+        .fc-event.event-championship {
+            background-color: #FF9800;
+        }
+        
+        .fc-event.event-final {
+            background-color: #E91E63;
+        }
+        
+        /* Events List */
+        .events-list {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .events-list h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .event-item {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #4caf50;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .event-item:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+        
+        .event-item.tournament {
+            border-left-color: #2196F3;
+        }
+        
+        .event-item.championship {
+            border-left-color: #FF9800;
+        }
+        
+        .event-item.final {
+            border-left-color: #E91E63;
+        }
+        
+        .event-item-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+        
+        .event-item-date {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .event-item-description {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        
+        /* Footer */
+        .footer_wrap {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-text {
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-menu {
+                gap: 15px;
+            }
+            
+            .calendar-wrapper {
+                padding: 15px;
+            }
+            
+            .fc {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="top_panel_wrap">
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-1.png" alt="APP Logo">
+                </a>
+            </div>
+            <ul class="header-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendario.html">Torneos</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+                <li><a href="about-us.html">Nosotros</a></li>
+                <li><a href="contacts.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="page-title">Calendario de Eventos</h1>
+        <p class="page-subtitle">Torneos y competencias 2026</p>
+        
+        <!-- Calendar -->
+        <div class="calendar-wrapper">
+            <div id="calendar"></div>
+        </div>
+        
+        <!-- Events List -->
+        <div class="events-list">
+            <h3>📅 Próximos Eventos</h3>
+            <div id="eventsList"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer_wrap">
+        <div class="footer-content">
+            <p class="footer-text">
+                &copy; 2026 Asociación Panameña de Pádel. Todos los derechos reservados.
+            </p>
+        </div>
+    </div>
+
+    <!-- FullCalendar JS -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,dayGridWeek,listMonth'
+                },
+                locale: 'es',
+                height: 'auto',
+                contentHeight: 'auto',
+                events: [
+                    // ENERO
+                    {
+                        title: '🎾 Torneo Regional',
+                        start: '2026-01-15',
+                        end: '2026-01-18',
+                        backgroundColor: '#2196F3',
+                        borderColor: '#1976D2',
+                        extendedProps: {
+                            description: 'Competencia regional con equipos de toda la región',
+                            type: 'tournament'
+                        }
+                    },
+                    {
+                        title: '🏆 Campeonato Junior',
+                        start: '2026-01-22',
+                        end: '2026-01-24',
+                        backgroundColor: '#FF9800',
+                        borderColor: '#E68900',
+                        extendedProps: {
+                            description: 'Competencia para jugadores menores de 18 años',
+                            type: 'championship'
+                        }
+                    },
+                    
+                    // FEBRERO
+                    {
+                        title: '🎾 Torneo Mixto',
+                        start: '2026-02-01',
+                        end: '2026-02-03',
+                        backgroundColor: '#9C27B0',
+                        borderColor: '#7B1FA2',
+                        extendedProps: {
+                            description: 'Competencia de dobles mixtos',
+                            type: 'tournament'
+                        }
+                    },
+                    {
+                        title: '🏆 Campeonato Abierto',
+                        start: '2026-02-14',
+                        end: '2026-02-18',
+                        backgroundColor: '#00BCD4',
+                        borderColor: '#0097A7',
+                        extendedProps: {
+                            description: 'Campeonato nacional abierto a todos los niveles',
+                            type: 'championship'
+                        }
+                    },
+                    
+                    // MARZO
+                    {
+                        title: '🎾 Torneo Femenino',
+                        start: '2026-03-07',
+                        end: '2026-03-10',
+                        backgroundColor: '#E91E63',
+                        borderColor: '#C2185B',
+                        extendedProps: {
+                            description: 'Competencia exclusiva para jugadores femeninas',
+                            type: 'tournament'
+                        }
+                    },
+                    {
+                        title: '🏅 Finales Inter-clubes',
+                        start: '2026-03-21',
+                        end: '2026-03-23',
+                        backgroundColor: '#FF5722',
+                        borderColor: '#D84315',
+                        extendedProps: {
+                            description: 'Finales de la competencia inter-clubes',
+                            type: 'final'
+                        }
+                    }
+                ],
+                dateClick: function(info) {
+                    console.log('Fecha seleccionada:', info.dateStr);
+                },
+                eventClick: function(info) {
+                    alert(info.event.title + '\n\n' + info.event.extendedProps.description);
+                }
+            });
+            
+            calendar.render();
+            
+            // Generar lista de eventos
+            generateEventsList(calendar.getEvents());
+        });
+        
+        function generateEventsList(events) {
+            const eventsList = document.getElementById('eventsList');
+            const sortedEvents = events.sort((a, b) => {
+                return new Date(a.start) - new Date(b.start);
+            });
+            
+            let html = '';
+            sortedEvents.forEach(event => {
+                const startDate = formatDate(event.start);
+                const endDate = event.end ? formatDate(new Date(event.end.getTime() - 86400000)) : startDate;
+                const dateRange = startDate === endDate ? startDate : `${startDate} - ${endDate}`;
+                const eventType = event.extendedProps.type || '';
+                
+                html += `
+                    <div class="event-item ${eventType}">
+                        <div class="event-item-title">${event.title}</div>
+                        <div class="event-item-date">📅 ${dateRange}</div>
+                        <div class="event-item-description">${event.extendedProps.description}</div>
+                    </div>
+                `;
+            });
+            
+            eventsList.innerHTML = html || '<p>No hay eventos próximos</p>';
+        }
+        
+        function formatDate(date) {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            return date.toLocaleDateString('es-ES', options);
+        }
+    </script>
+</body>
+</html>
