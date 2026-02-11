@@ -2,8 +2,113 @@
 .tp-button:hover.green,
 .purchase.green,
 .purchase:hover.green {
-  background-color: #003D99 !important;
+  background-color: #003d99 !important;
   -webkit-box-shadow: 0px 3px 0px 0px #002a80 !important;
   -moz-box-shadow: 0px 3px 0px 0px #002a80 !important;
   box-shadow: 0px 3px 0px 0px #002a80 !important;
+}
+
+/* Header background in Panama blue */
+.top_panel_wrap_inner {
+  background-color: #003d99 !important;
+}
+
+/* Links and accent color: green -> Panama red */
+a,
+.scheme_dark a,
+.scheme_light a {
+  color: #ce1126 !important;
+}
+
+a:hover,
+.scheme_dark a:hover,
+.scheme_light a:hover {
+  color: #a50d1d !important;
+}
+
+/* Accent helpers */
+.scheme_dark {
+  background-color: #ce1126 !important;
+}
+
+.accent1 {
+  color: #ce1126 !important;
+}
+
+.accent1_bgc {
+  background-color: #ce1126 !important;
+}
+
+.accent1_bg {
+  background: #ce1126 !important;
+}
+
+.accent1_border {
+  border-color: #ce1126 !important;
+}
+
+blockquote {
+  background-color: #ce1126 !important;
+}
+
+/* Buttons and primary CTAs: green -> Panama red */
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"],
+.sc_button.sc_button_style_filled,
+.sc_button .default-state,
+.sc_button .active-state,
+.sc_item_button > a,
+.sc_item_button > a:before {
+  background-color: #ce1126 !important;
+  border-color: #ce1126 !important;
+  color: #ffffff !important;
+}
+
+button:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.sc_button.sc_button_style_filled:hover,
+.sc_item_button > a:hover,
+.sc_item_button > a:hover:before {
+  background-color: #a50d1d !important;
+  border-color: #a50d1d !important;
+  color: #ffffff !important;
+}
+
+/* Icon hovers and accent icons: green -> red */
+.hover_icon:before,
+.sc_icon_shape_round.sc_icon,
+.sc_icon_shape_square.sc_icon,
+.sc_title_icon,
+.sc_item_subtitle {
+  background-color: #ce1126 !important;
+  color: #ffffff !important;
+}
+
+.sc_icon_shape_round.sc_icon:hover,
+.sc_icon_shape_square.sc_icon:hover,
+a:hover .sc_icon_shape_round.sc_icon,
+a:hover .sc_icon_shape_square.sc_icon {
+  background-color: #ffffff !important;
+  color: #ce1126 !important;
+}
+
+/* Section title underline / accent bar */
+.sc_item_title:after,
+.sc_title_underline::after {
+  background-color: #ce1126 !important;
+  border-top-color: #ce1126 !important;
+}
+
+/* Scroll-to-top and similar accent blocks */
+.scroll_to_top,
+.sc_highlight_style_1,
+.sc_highlight_style_2,
+.sc_infobox.sc_infobox_style_success {
+  background-color: #ce1126 !important;
+  border-color: #ce1126 !important;
+  color: #ffffff !important;
 }
