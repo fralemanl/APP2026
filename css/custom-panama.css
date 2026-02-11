@@ -48,3 +48,16 @@
     transform: translateX(-50%);
   }
 }
+
+/* Ajustes responsive para móvil */
+@media (max-width: 767px) {
+  .aliados-track {
+    gap: 20px;
+    animation-duration: 45s;
+  }
+
+  .aliados-logo img {
+    max-height: 90px;
+    padding: 8px 16px;
+  }
+}
