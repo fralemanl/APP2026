@@ -30,13 +30,13 @@
 }
 
 .aliados-logo img {
-  max-height: 70px;
+  max-height: 140px;
   width: auto;
   height: auto;
   object-fit: contain;
   background: #ffffff;
   border-radius: 8px;
-  padding: 6px 14px;
+  padding: 12px 28px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
