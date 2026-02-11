@@ -83,7 +83,7 @@ CORRECT_HEADER = '''<!-- Header -->
                       <img
                         src="images/logo-1.png"
                         alt="APP Logo"
-                        style="max-height: 60px; width: auto"
+                        style="max-height: 75px; width: auto"
                       />
                     </a>
                   </div>
@@ -163,7 +163,7 @@ CORRECT_HEADER = '''<!-- Header -->
                 <img
                   src="images/logo-1.png"
                   alt="APP Logo"
-                  style="max-height: 50px; width: auto"
+                  style="max-height: 60px; width: auto"
                 />
               </a>
             </div>
