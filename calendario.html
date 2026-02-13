@@ -40,45 +40,6 @@
         background-color: #f5f5f5;
       }
 
-      /* Header */
-      .top_panel_wrap {
-        background: #1a1a1a;
-        padding: 15px 0;
-        margin-bottom: 30px;
-      }
-
-      .header-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .logo img {
-        max-height: 50px;
-        width: auto;
-      }
-
-      .header-menu {
-        display: flex;
-        gap: 30px;
-        list-style: none;
-      }
-
-      .header-menu a {
-        color: white;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-
-      .header-menu a:hover {
-        color: #003D99;
-      }
-
       /* Main Content */
       .container {
         max-width: 1200px;
@@ -258,10 +219,6 @@
 
       /* Responsive */
       @media (max-width: 768px) {
-        .header-menu {
-          gap: 15px;
-        }
-
         .calendar-wrapper {
           padding: 15px;
         }
@@ -271,25 +228,193 @@
         }
       }
     </style>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" type="text/css" media="all" />`n  </head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" type="text/css" media="all" />
+  </head>
   <body>
     <!-- Header -->
-    <div class="top_panel_wrap">
-      <div class="header-content">
+    <header class="top_panel_wrap top_panel_style_3 scheme_original">
+      <div
+        class="top_panel_wrap_inner top_panel_inner_style_3 top_panel_position_above"
+      >
+        <!-- User panel -->
+        <div class="top_panel_top">
+          <div class="content_wrap clearfix">
+            <div class="top_panel_top_contact_area icon-smartphone">
+              +507 6674-1441
+            </div>
+            <div class="top_panel_top_open_hours icon-mail-2">
+              info@padelpanama.org
+            </div>
+            <div class="top_panel_top_user_area">
+              <ul id="menu_user" class="menu_user_nav"></ul>
+            </div>
+          </div>
+        </div>
+        <!-- /User panel -->
+        <!-- Top Menu -->
+        <div class="top_panel_middle">
+          <div class="content_wrap">
+            <div class="contact_logo">
+              <div class="logo">
+                <a href="index.html">
+                  <img
+                    src="images/logo-1.png"
+                    alt="APP Logo"
+                    style="max-height: 75px; width: auto"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="menu_main_social_wrap">
+              <div class="top_panel_top_socials">
+                <div
+                  class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_small"
+                >
+                  <div class="sc_socials_item">
+                    <a
+                      href="https://www.instagram.com/asociacionpadelpanama?igsh=ZWttdTZuaXo0MWp4"
+                      target="_blank"
+                      class="social_icons"
+                    >
+                      <i
+                        class="fab fa-instagram"
+                        style="font-size: 20px; color: #ce1126"
+                      ></i>
+                    </a>
+                  </div>
+                  <div class="sc_socials_item">
+                    <a
+                      href="https://www.youtube.com/@AsociacionPanamenadePadel"
+                      target="_blank"
+                      class="social_icons"
+                    >
+                      <i
+                        class="fab fa-youtube"
+                        style="font-size: 20px; color: #ff0000"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="menu_main_wrap">
+                <a
+                  href="#"
+                  class="menu_main_responsive_button icon-menu"
+                ></a>
+                <nav class="menu_main_nav_area">
+                  <ul id="menu_main" class="menu_main_nav">
+                    <li class="menu-item">
+                      <a href="index.html">Home</a>
+                    </li>
+                    <li class="menu-item current-menu-item">
+                      <a href="calendario.html">Calendario</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="ranking.html">Ranking</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://drive.google.com/file/d/1e47nW3VrZoprLheIVogAqdniEndXl2g_/view?usp=drive_link"
+                        target="_blank"
+                        >Reglamento</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="contacts.html">Contacto</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Top Menu -->
+      </div>
+    </header>
+    <!-- /Header -->
+    <!-- Header Mobile -->
+    <div class="header_mobile">
+      <div class="content_wrap">
+        <div class="menu_button icon-menu"></div>
         <div class="logo">
           <a href="index.html">
-            <img src="images/logo-1.png" alt="APP Logo" />
+            <img
+              src="images/logo-1.png"
+              alt="APP Logo"
+              style="max-height: 60px; width: auto"
+            />
           </a>
         </div>
-        <ul class="header-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="calendario.html">Calendario</a></li>
-          <li><a href="ranking.html">Ranking</a></li>
-          <li><a href="about-us.html">Nosotros</a></li>
-          <li><a href="contacts.html">Contacto</a></li>
-        </ul>
       </div>
+      <div class="side_wrap">
+        <div class="close">Close</div>
+        <div class="panel_top">
+          <nav class="menu_main_nav_area">
+            <ul id="menu_main_mobile" class="menu_main_nav">
+              <li class="menu-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="menu-item current-menu-item">
+                <a href="calendario.html">Calendario</a>
+              </li>
+              <li class="menu-item">
+                <a href="ranking.html">Ranking</a>
+              </li>
+              <li class="menu-item">
+                <a href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="menu-item">
+                <a
+                  href="https://drive.google.com/file/d/1e47nW3VrZoprLheIVogAqdniEndXl2g_/view?usp=drive_link"
+                  target="_blank"
+                  >Reglamento</a
+                >
+              </li>
+              <li class="menu-item">
+                <a href="contacts.html">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="panel_bottom">
+          <div class="contact_socials">
+            <div
+              class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_small"
+            >
+              <div class="sc_socials_item">
+                <a
+                  href="https://www.instagram.com/asociacionpadelpanama?igsh=ZWttdTZuaXo0MWp4"
+                  target="_blank"
+                  class="social_icons"
+                >
+                  <i
+                    class="fab fa-instagram"
+                    style="font-size: 20px; color: #ce1126"
+                  ></i>
+                </a>
+              </div>
+              <div class="sc_socials_item">
+                <a
+                  href="https://www.youtube.com/@AsociacionPanamenadePadel"
+                  target="_blank"
+                  class="social_icons"
+                >
+                  <i
+                    class="fab fa-youtube"
+                    style="font-size: 20px; color: #ff0000"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mask"></div>
     </div>
+    <!-- /Header Mobile -->
 
     <!-- Main Content -->
     <div class="container">
@@ -330,84 +455,198 @@
           headerToolbar: {
             left: "prev,next today",
             center: "title",
-            right: "dayGridMonth,dayGridWeek,listMonth",
+            right: "dayGridMonth",
           },
           locale: "es",
           height: "auto",
           contentHeight: "auto",
           events: [
-            // ENERO
-            {
-              title: "🎾 Torneo Regional",
-              start: "2026-01-15",
-              end: "2026-01-18",
-              backgroundColor: "#003D99",
-              borderColor: "#1976D2",
-              extendedProps: {
-                description:
-                  "Competencia regional con equipos de toda la región",
-                type: "tournament",
-              },
-            },
-            {
-              title: "🏆 Campeonato Junior",
-              start: "2026-01-22",
-              end: "2026-01-24",
-              backgroundColor: "#CE1126",
-              borderColor: "#E68900",
-              extendedProps: {
-                description: "Competencia para jugadores menores de 18 años",
-                type: "championship",
-              },
-            },
-
-            // FEBRERO
-            {
-              title: "🎾 Torneo Mixto",
-              start: "2026-02-01",
-              end: "2026-02-03",
-              backgroundColor: "#9C27B0",
-              borderColor: "#7B1FA2",
-              extendedProps: {
-                description: "Competencia de dobles mixtos",
-                type: "tournament",
-              },
-            },
-            {
-              title: "🏆 Campeonato Abierto",
-              start: "2026-02-14",
-              end: "2026-02-18",
-              backgroundColor: "#00BCD4",
-              borderColor: "#0097A7",
-              extendedProps: {
-                description: "Campeonato nacional abierto a todos los niveles",
-                type: "championship",
-              },
-            },
-
             // MARZO
             {
-              title: "🎾 Torneo Femenino",
+              title: "🎾 Torneo Proplay 300",
               start: "2026-03-07",
-              end: "2026-03-10",
+              end: "2026-03-12",
               backgroundColor: "#CE1126",
               borderColor: "#C2185B",
               extendedProps: {
-                description: "Competencia exclusiva para jugadores femeninas",
+                description: "Proplay da la bienvenida a la temporada 2026",
                 type: "tournament",
               },
             },
             {
-              title: "🏅 Finales Inter-clubes",
-              start: "2026-03-21",
-              end: "2026-03-23",
+              title: "🎾 Fairplay 300",
+              start: "2026-03-13",
+              end: "2026-03-21",
               backgroundColor: "#FF5722",
               borderColor: "#D84315",
               extendedProps: {
-                description: "Finales de la competencia inter-clubes",
-                type: "final",
+                description: "Desde las instalaciones de Fairplay, Marzo se llena de pádel",
+                type: "tournament",
               },
             },
+            // ABRIL
+            {
+              title: "🎾 APP 500",
+              start: "2026-04-10",
+              end: "2026-04-14",
+              backgroundColor: "#CE1126",
+              borderColor: "#C2185B",
+              extendedProps: {
+                description: "La APP organiza su primer torneo de la temporada con categoría 500",
+                type: "tournament",
+              },
+            },
+            {
+              title: "🎾 Royal Padel 100",
+              start: "2026-04-18",
+              end: "2026-04-24",
+              backgroundColor: "#FF5722",
+              borderColor: "#D84315",
+              extendedProps: {
+                description: "Royal Padel invita a jugar su gran torneo",
+                type: "tournament",
+              },
+            },
+            // MAYO
+
+            {
+              title: "🎾 Ultimate 500",
+              start: "2026-05-09",
+              end: "2026-05-16",
+              backgroundColor: "#CE1126",
+              borderColor: "#C2185B",
+              extendedProps: {
+                description: "Llega uno de los torneos más esperados de la temporada, en Park and Padel",
+                type: "tournament",
+              },
+            },
+            {
+              title: "🎾 APP 100",
+              start: "2026-05-16",
+              end: "2026-05-23",
+              backgroundColor: "#FF5722",
+              borderColor: "#D84315",
+              extendedProps: {
+                description: "La App te invita a jugar de este gran torneo en lasinstalaciones de PadelBAR",
+                type: "tournament",
+              },
+            },
+            // JULIO
+            {
+              title: "🎾 APP 500",
+              start: "2026-07-10",
+              end: "2026-07-18",
+              backgroundColor: "#CE1126",
+              borderColor: "#C2185B",
+              extendedProps: {
+                description: "Torneo de categoría 500 organizado por la APP, desde las instalaciones de Park and Padel",
+                type: "tournament",
+              },
+            },
+            // AGOSTO
+            {
+              title: "🎾 Chiriqui 100",
+              start: "2026-08-15",
+              end: "2026-03-22",
+              backgroundColor: "#FF5722",
+              borderColor: "#D84315",
+              extendedProps: {
+                description: "El oeste del país se une a la fiesta en invita a su gran torneo",
+                type: "tournament",
+              },
+            },
+            {
+              title: "🎾 Fairplay 500",
+              start: "2026-08-06",
+              end: "2026-08-15",
+              backgroundColor: "#FF5722",
+              borderColor: "#D84315",
+              extendedProps: {
+                description: "Desde las instalaciones de Fairplay, Agosto trae este emocionante torneo de categoría 500",
+                type: "tournament",
+              },
+            },
+            // SEPTIEMBRE
+            {
+              title: "🎾 Smash 300",
+              start: "2026-09-04",
+              end: "2026-09-11",
+              backgroundColor: "#FF5722",
+              borderColor: "#D84315",
+              extendedProps: {
+                description: "Smash Padel Club se viste de gala con su gran torneo 2026",
+                type: "tournament",
+              },
+            },
+            {
+              title: "🎾 Chitré 100",
+              start: "2026-09-24",
+              end: "2026-09-27",
+              backgroundColor: "#FF5722",
+              borderColor: "#D84315",
+              extendedProps: {
+                description: "El pádel continúa de gira por el país y esta vez llega a la región de Azuero",
+                type: "tournament",
+              },
+            },
+            {
+              title: "🎾 Santiago 100",
+              start: "2026-09-24",
+              end: "2026-09-27",
+              backgroundColor: "#FF5722",
+              borderColor: "#D84315",
+              extendedProps: {
+                description: "Septiembre se llena de pádel con este torneo en la región de Veraguas",
+                type: "tournament",
+              },
+            },
+            // OCTUBRE
+            {
+              title: "🎾 UPX 500",
+              start: "2026-10-13",
+              end: "2026-10-21",
+              backgroundColor: "#FF5722",
+              borderColor: "#D84315",
+              extendedProps: {
+                description: "Otro gran torneo de categoría 500 organizado por la UPX, desde las instalaciones de Park and Padel",
+                type: "tournament",
+              },
+            },
+            {
+              title: "🎾 Fairplay",
+              start: "2026-10-14",
+              end: "2026-10-23",
+              backgroundColor: "#FF5722",
+              borderColor: "#D84315",
+              extendedProps: {
+                description: "Fairplay invita a jugar en sus grandes instalaciones, este emocionante torneo de categoría 300",
+                type: "tournament",
+              },
+            },
+            // NOVIEMBRE
+            {
+              title: "🎾 Visit Panama APP 500 + APP FIP Promises",
+              start: "2026-11-13",
+              end: "2026-11-21",
+              backgroundColor: "#FF5722",
+              borderColor: "#D84315",
+              extendedProps: {
+                description: "pro padel center se une a la fiesta con este gran evento organizado por la APP",
+                type: "tournament",
+              },
+            },
+            // DICIEMBRE
+            {
+              title: "🎾 APP Ultimate Master",
+              start: "2026-12-03",
+              end: "2026-12-06",
+              backgroundColor: "#FF5722",
+              borderColor: "#D84315",
+              extendedProps: {
+                description: "S'olo los mejores del año se enfrentan en este gran torneo de fin de temporada organizado por la APP",
+                type: "tournament",
+              },
+            },              
           ],
           dateClick: function (info) {
             console.log("Fecha seleccionada:", info.dateStr);

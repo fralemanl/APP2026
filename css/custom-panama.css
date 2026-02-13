@@ -2,7 +2,7 @@
 .tp-button:hover.green,
 .purchase.green,
 .purchase:hover.green {
-  background-color: #003D99 !important;
+  background-color: #003d99 !important;
   -webkit-box-shadow: 0px 3px 0px 0px #002a80 !important;
   -moz-box-shadow: 0px 3px 0px 0px #002a80 !important;
   box-shadow: 0px 3px 0px 0px #002a80 !important;
