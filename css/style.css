@@ -5846,6 +5846,9 @@ a.tribe-events-read-more:hover,
 	font-weight: 700;
 	color: rgba(255, 255, 255, 1.00);
 	font-family: 'Montserrat';
+	padding-left: 0;
+  	margin-left: 0;
+  	text-indent: 0;
 }
 #slide-1-layer-7{
 	z-index: 7;
@@ -5857,6 +5860,9 @@ a.tribe-events-read-more:hover,
 	font-weight: 400;
 	color: rgba(206, 221, 243, 1.00);
 	font-family:'Open Sans';
+  	padding-left: 0;
+  	margin-left: 0;
+  	text-indent: 0;
 }
 #slide-1-layer-9{
 	z-index: 8;
