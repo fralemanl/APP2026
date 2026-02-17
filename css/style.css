@@ -6483,3 +6483,15 @@ a.tribe-events-read-more:hover,
 	padding-top: 70px !important;
 	padding-bottom: 65px !important;
 }
+
+	.event-item-link {
+	display: inline-block;
+	margin-top: 8px;
+	color: #FF5722;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+	.event-item-link:hover {
+	text-decoration: underline;
+	}
